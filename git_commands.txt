@@ -46,5 +46,30 @@ NOW TO COMMIT:
         To see log of commits
 
 
+Grabbing of a remote/ virtual repo:
+< git clone <url> <where to clone> >
+< git clone ../remote_repo.git . >
+< git clone https://github.com/dwiberg4/comm_progs.git . >
+
+
+Viewing info about remote repo:
+< git remote -v >
+< git branch -a >
+
+
+PUSHING CHANGES:
+	Must first commit these changes locally
+< git diff >
+	can see the differences of the changes
+	run < git status > again to see the ones requiring a commit
+* Technically here, we should re-pull right before we push because this could be a project
+	where there are multiple developpers and you may not even have original anymore.
+	As you what you're comparing to may not be the current MASTER because others have
+	already pushed changes to the virtual repo...
+
+< git pull origin master >
+	origin here, is just the name of the remote repo
+	master here, is technically the branch that we want to push to
+< git push origin master >
 
 
