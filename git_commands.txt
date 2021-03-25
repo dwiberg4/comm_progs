@@ -1,0 +1,50 @@
+List of useful GIT commands
+
+To set up username and email:
+
+< git config --global user.name "dwiberg4" >
+< git config --global user.email "dwiberg4@gmail.com >
+
+
+For general help:
+< git help <verb> >
+< git <verb> --help >
+
+
+To start tracking a file, directory, or project using git:
+< git init >
+        This creates a .git directory in that directory and begins the tracking
+To stop tracking:
+< rm -rf .git >
+
+The git init command starts the tracking of the project/ folder, but you actually
+haven't committed anything yet...
+
+< git status >
+
+You'll see some untracked files. Sometimes there are files on your local repo that
+are not necessarily ones that you want to be committing and push/pulling back and
+forth. Or they are ones that others don't need/ need to see. In order to ignore those
+files you create a .gitignore file:
+< touch .gitignore >
+
+Can then add such things as :
+        *.pyc ---- to ignore all files that end with .pyc
+
+To add all files that are currently untracked or that we've made changes to:
+        -Adds them to the STAGING AREA  not yet to the repo!
+< git add -A >
+To remove files from the staging area:
+< git reset >
+        Removes all current files from the staging area
+< git reset calc.py >
+        Removes the specified file from the staging area
+
+NOW TO COMMIT:
+< git commit -m "Initial commit, this is a detailed comment that you add!" >
+< git log >
+        To see log of commits
+
+
+
+
