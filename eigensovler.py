@@ -94,7 +94,7 @@ def damp_ratio(eigvals):
     zeta = np.zeros(((int(eigvals.size/2)),1),dtype = 'complex_')
     for i in range(int(eigvals.size/2)):
         j = i*2
-        top = -eigvals[j] + eigvals[j+1]
+        top = -(eigvals[j] + eigvals[j+1])
         zeta[i] = top / (2* (np.sqrt(eigvals[j]*eigvals[j+1])) )
     return zeta
 
